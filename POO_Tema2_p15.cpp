@@ -11,7 +11,7 @@ protected:
 
 public:
     NrMare();   //constructor de initializare
-    NrMare(char s[Max]);
+    NrMare(char s[Max]);//constructor de initializare cu un sir dat
     NrMare(NrMare&); //constructor de copiere
 
     NrMare &operator =(NrMare &ob2)
@@ -285,7 +285,7 @@ public:
     {
         cout<<"Descompunerea numarului "<<*this<<" in suma de numere Lucas este:"<<endl;
         NrMare c,zero("0"),k,unu("1"),trei("3"),a,b;
-        NrMare n=*this; /// poate nu o sa iti placa ca am facut asa, ideea e ca m am blocat la scadere (^)
+        NrMare n=*this; 
         int i;
         while(zero<n)
         {
@@ -301,11 +301,11 @@ public:
             }
 
             cout<<a<<" ";
-            n=n-a;   ///(^) aici cand am incercat sa folosesc this si sa fac cast nu a mers sub nici o forma, din cauza atribuirii
-        }                   ///this ul era de tip Fibonacci si c ul de tip NrMare si nu m a lasat sa fac *this=*this-c;
-                  cout<<endl;          ///Am incercat si *this=const_cast<NrMare>(*this-c)
-    }                   ///exista vreo modalitate sa pot sa fac  Fibonacci=Fibonacci-NrMare?
-};                      ///sau e bine asa cum am facut?
+            n=n-a;  
+        }                   
+        cout<<endl;          
+    }                   
+};                     
 
 
 int main()
@@ -322,12 +322,13 @@ int main()
     {
         cout<<endl<<i+1<<") Tasteaza F pentru Fibonacci sau L pentru Lucas"<<endl;
         cin>>a;
-
+        
         if(a=='F')
             v[i]=new Fibonacci();
         if(a=='L')
             v[i]=new Lucas();
-
+        
+        ///numarul nu trebuie sa fie de vreun tip anume, dar descompunerea lui se va face in suma de numere de tip F/L
         cout<<"Acum tasteaza numarul pe care vrei sa l descompui"<<endl<<"nr"<<i+1<<"= ";
 
         v[i]->read();
