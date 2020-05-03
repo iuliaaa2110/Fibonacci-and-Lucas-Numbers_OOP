@@ -1,10 +1,5 @@
 #include "NrMare.h"
 
-#include<iostream>
-#include<string.h>
-#include<climits>
-#define Max 1000000
-
 NrMare::NrMare()
 {
     n=0;
