@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1588535446 source:d:\iulianow\c++\poo\proiect\pootema2p15\main.cpp
+	<iostream>
+	"NrMare.h"
+	"Fibonacci.h"
+	"Lucas.h"
+
+1588535257 d:\iulianow\c++\poo\proiect\pootema2p15\nrmare.h
+	<iostream>
+	<string.h>
+	<climits>
+
+1588535343 d:\iulianow\c++\poo\proiect\pootema2p15\fibonacci.h
+
+1588535389 d:\iulianow\c++\poo\proiect\pootema2p15\lucas.h
+
+1588535306 source:d:\iulianow\c++\poo\proiect\pootema2p15\nrmare.cpp
+	"NrMare.h"
+	<iostream>
+	<string.h>
+	<climits>
+
