@@ -5,15 +5,15 @@
 
 int main()
 {
-
-    NrMare **v=new NrMare*[3];
     int n;
     char a;
 
     std::cout<<"n=";
     std::cin>>n;
 
-    for(int i=0;i<=n;i++)
+    NrMare **v=new NrMare*[n+1];
+
+    for(int i=0;i<n;i++)
     {
         std::cout<<std::endl<<i+1<<") Tasteaza F pentru Fibonacci sau L pentru Lucas"<<std::endl;
         std::cin>>a;
