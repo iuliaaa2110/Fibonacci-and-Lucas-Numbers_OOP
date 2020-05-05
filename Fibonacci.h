@@ -18,7 +18,7 @@ public:
             this->v[i]=(s[i]-'0');
     }
 
-    virtual void descompunere()
+    void descompunere()
     {
         std::cout<<"Descompunerea numarului "<<*this<<" in suma de numere Fibonacci este:"<<std::endl;
         NrMare c,zero("0"),k,unu("1"),trei("3"),a,b;
