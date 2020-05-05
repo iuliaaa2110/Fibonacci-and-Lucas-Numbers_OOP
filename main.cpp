@@ -1,5 +1,6 @@
 #include <iostream>
 #include "NrMare.h"
+#include "BazaLucas.h"
 #include "Fibonacci.h"
 #include "Lucas.h"
 
@@ -34,4 +35,3 @@ int main()
 
     return 0;
 }
-
