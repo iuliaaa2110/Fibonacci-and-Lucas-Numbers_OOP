@@ -1,47 +1,29 @@
 #ifndef LUCAS_H_INCLUDED
 #define LUCAS_H_INCLUDED
 
-class Lucas: public NrMare ///suma de numere Lucas
+class Lucas: public BazaLucas ///suma de numere Lucas
 {
 public:
 
-    void read()
-    {
-        char s[Max];
-        int i;
+    NrMare *unu, *trei;
 
-        std::cin>>s;
-        this->n=strlen(s);
-        this->v=new int[this->n];
+    Lucas() {
+        unu = new NrMare("1");
+        trei = new NrMare("3");
+    }
 
-        for(i=0;i<this->n;i++)
-            this->v[i]=(s[i]-'0');
+    ~Lucas(){
+        delete unu;
+        delete trei;
     }
 
     void descompunere()
     {
         std::cout<<"Descompunerea numarului "<<*this<<" in suma de numere Lucas este:"<<std::endl;
-        NrMare c,zero("0"),k,unu("1"),trei("3"),a,b;
-        NrMare n=*this;
-        int i;
-        while(zero<n)
-        {
-            a=unu;
-            b=trei;
-
-            while(b<n || b==n)
-            {
-                c=a+b;
-                a=b;
-                b=c;
-
-            }
-
-            std::cout<<a<<" ";
-            n=n-a;
-        }
+        BazaLucas::descompunere(*unu,*trei);
         std::cout<<std::endl;
     }
+
 };
 
 
