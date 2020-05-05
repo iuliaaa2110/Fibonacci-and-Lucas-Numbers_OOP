@@ -2,9 +2,10 @@
 #define NRMARE_H_INCLUDED
 
 #include<iostream>
-#include<string.h>
+#include<cstring>
 #include<climits>
-#define Max 1000000
+//#define MAX 1000000
+const int MAX=1000000;
 
 class NrMare{
 protected:
@@ -12,8 +13,9 @@ protected:
 
 public:
     NrMare();   //constructor de initializare
-    NrMare(char s[Max]);//constructor de initializare cu un sir dat
+    NrMare(char s[MAX]);//constructor de initializare cu un sir dat
     NrMare(NrMare&); //constructor de copiere
+    ~NrMare();
 
     NrMare &operator =(NrMare &ob2)
     {
@@ -40,7 +42,7 @@ public:
 
     virtual void read()
     {
-        char s[Max];
+        char s[MAX];
         int i;
 
         std::cin>>s;
@@ -58,9 +60,6 @@ public:
     friend bool operator ==(NrMare &ob1,NrMare &ob2);
     friend bool operator <(NrMare &ob1,NrMare &ob2);
     virtual void descompunere(){};
-
 };
-
-
 
 #endif // NRMARE_H_INCLUDED
