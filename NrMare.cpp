@@ -6,7 +6,7 @@ NrMare::NrMare()
     v=NULL;
 }
 
-NrMare::NrMare(char s[Max])
+NrMare::NrMare(char s[MAX])
 {
     n=strlen(s);
     v=new int[n];
@@ -18,9 +18,15 @@ NrMare::NrMare(char s[Max])
 NrMare::NrMare(NrMare &ob1)
 {
     n=ob1.n;
-    v=new int[n+1];
+    v=new int[n];
     for(int i=0;i<n;i++)
         v[i]=ob1.v[i];
+}
+
+NrMare::~NrMare()
+{
+    delete &n;
+    delete []v;
 }
 
 std::ostream& operator <<(std::ostream &out, NrMare &ob1)
@@ -161,3 +167,4 @@ bool operator <(NrMare &ob1,NrMare &ob2)
     return true;
 
 }
+
