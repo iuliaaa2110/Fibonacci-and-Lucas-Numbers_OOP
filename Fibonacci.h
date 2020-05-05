@@ -22,7 +22,7 @@ public:
     {
         std::cout<<"Descompunerea numarului "<<*this<<" in suma de numere Fibonacci este:"<<std::endl;
         NrMare c,zero("0"),k,unu("1"),trei("3"),a,b;
-        NrMare n=*this; /// poate nu o sa iti placa ca am facut asa, ideea e ca m am blocat la scadere (^)
+        NrMare n=*this; /// poate nu o sa iti placa ca am facut asa(poate asteptai sa am Fibonacci n;), ideea e ca m am blocat la scadere (^)
         int i;
         while(zero<n)
         {
