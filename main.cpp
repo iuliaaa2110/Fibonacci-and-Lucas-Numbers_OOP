@@ -33,5 +33,6 @@ int main()
         std::cout<<std::endl;
     }
 
+    delete []v;
     return 0;
 }
