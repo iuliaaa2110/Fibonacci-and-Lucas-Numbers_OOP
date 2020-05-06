@@ -16,27 +16,12 @@ public:
     NrMare(char s[MAX]);//constructor de initializare cu un sir dat
     NrMare(NrMare&); //constructor de copiere
     ~NrMare();
+    
+    friend void Swap(NrMare &ob1,NrMare &ob2);
 
-    NrMare &operator =(NrMare &ob2)
+    NrMare &operator =(NrMare ob2)
     {
-        int i;
-
-        if(this->n<ob2.n)
-        {
-            for(i=this->n;i<ob2.n;i++)
-                this->v=new int();
-            this->n=ob2.n;
-        }
-
-        if(this->n>ob2.n)
-            for(i=ob2.n;i<this->n;i++)
-                delete [] &this->v[i];
-
-        //acum au aceeasi lungime:
-        this->n=ob2.n;
-        for(i=0;i<this->n;i++)
-            this->v[i]=ob2.v[i];
-
+        Swap(*this,ob2);
         return *this;
     }
 
