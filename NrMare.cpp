@@ -29,6 +29,12 @@ NrMare::~NrMare()
     delete []v;
 }
 
+void Swap(NrMare &ob1, NrMare &ob2)
+    {
+        std::swap(ob1.n,ob2.n);
+        std::swap(ob1.v,ob2.v);
+    }
+
 std::ostream& operator <<(std::ostream &out, NrMare &ob1)
 {
     int i;
