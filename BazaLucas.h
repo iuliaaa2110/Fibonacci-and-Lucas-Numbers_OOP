@@ -1,7 +1,6 @@
 #ifndef BAZALUCAS_H_INCLUDED
 #define BAZALUCAS_H_INCLUDED
 
-#include<algorithm>
 #include<vector>
 
 class BazaLucas:public NrMare
