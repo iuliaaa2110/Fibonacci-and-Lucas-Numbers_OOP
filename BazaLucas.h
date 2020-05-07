@@ -13,11 +13,8 @@ class BazaLucas:public NrMare
     static std::vector<NrMare*> vF;
     static int firstTimeF;
 
-    NrMare *zero;
-
     BazaLucas()
     {
-        zero=new NrMare("0");
 
         if (firstTimeL == 0)
         {
@@ -28,14 +25,10 @@ class BazaLucas:public NrMare
 
          if (firstTimeF == 0)
         {
-            vF.push_back(zero);
+            vF.push_back(new NrMare("0"));
             vF.push_back(new NrMare("1"));
             firstTimeF = 1;
         }
-    }
-
-    ~BazaLucas(){
-        delete zero;
     }
 
     int find_(std::vector<NrMare*> v, NrMare x)    //imi returneaza pozitia celui mai mare element<=x in vector
@@ -63,6 +56,7 @@ class BazaLucas:public NrMare
 
     void descompunere(std::vector<NrMare*> v)
     {
+        NrMare *zero=new NrMare("0");
         NrMare n=*this;
         int i=find_(v,n);
 
