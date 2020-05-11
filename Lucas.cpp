@@ -11,4 +11,5 @@ Lucas::Lucas(){
         vL.push_back(new NrMare("3"));
         firstTimeL = 1;
     }
+    
 }
