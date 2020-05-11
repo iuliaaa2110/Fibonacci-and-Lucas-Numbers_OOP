@@ -1,5 +1,5 @@
 #include "Fibonacci.h"
-#include<iostream>
+
 int Fibonacci::firstTimeF = 0;
 std::vector<NrMare*> Fibonacci::vF;
 
