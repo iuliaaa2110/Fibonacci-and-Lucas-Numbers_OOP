@@ -1,35 +1,15 @@
-#include "NrMare.h"
 #include "BazaLucas.h"
 
-int BazaLucas::firstTimeL = 0;
-std::vector<NrMare*> BazaLucas::vL;
 
-int BazaLucas::firstTimeF = 0;
-std::vector<NrMare*> BazaLucas::vF;
-
-BazaLucas::BazaLucas()
+int BazaLucas:: find_(std::vector<NrMare*> &v, NrMare x)    //imi returneaza pozitia celui mai mare element<=x in vector
     {
-
-        if (firstTimeL == 0)
-        {
-            vL.push_back(new NrMare("1"));
-            vL.push_back(new NrMare("3"));
-            firstTimeL = 1;
-        }
-
-         if (firstTimeF == 0)
-        {
-            vF.push_back(new NrMare("0"));
-            vF.push_back(new NrMare("1"));
-            firstTimeF = 1;
-        }
-    }
-
-int BazaLucas:: find_(std::vector<NrMare*> v, NrMare x)    //imi returneaza pozitia celui mai mare element<=x in vector
-    {
+        std::cout<<std::endl<<v.size()<<std::endl;
         for(int i=0;i<v.size();i++)
+        {
+            std::cout<<*v[i]<<" ";
             if(x<*v[i])  //daca am depasit valoarea lui x
                 return i-1;
+        }
 
         return v.size()-1;
     }
@@ -48,7 +28,7 @@ void BazaLucas:: generate_(std::vector<NrMare*> &v,NrMare n,int i)
 
     }
 
-void BazaLucas::descompunere(std::vector<NrMare*> v)
+void BazaLucas::descompunere(std::vector<NrMare*> &v)
     {
         NrMare *zero=new NrMare("0");
         NrMare n=*this;
