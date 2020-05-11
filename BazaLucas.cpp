@@ -1,6 +1,5 @@
 #include "BazaLucas.h"
 
-
 int BazaLucas:: find_(std::vector<NrMare*> &v, NrMare x)    //imi returneaza pozitia celui mai mare element<=x in vector
     {
         for(int i=0;i<v.size();i++)
