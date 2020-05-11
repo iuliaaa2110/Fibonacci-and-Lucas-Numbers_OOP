@@ -3,13 +3,9 @@
 
 int BazaLucas:: find_(std::vector<NrMare*> &v, NrMare x)    //imi returneaza pozitia celui mai mare element<=x in vector
     {
-        std::cout<<std::endl<<v.size()<<std::endl;
         for(int i=0;i<v.size();i++)
-        {
-            std::cout<<*v[i]<<" ";
             if(x<*v[i])  //daca am depasit valoarea lui x
                 return i-1;
-        }
 
         return v.size()-1;
     }
