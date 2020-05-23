@@ -11,12 +11,7 @@ public:
 
     Lucas();
 
-    void descompunere()
-    {
-        std::cout<<"Descompunerea numarului "<<*this<<" in suma de numere Lucas este:"<<std::endl;
-        BazaLucas::descompunere(vL);
-        std::cout<<std::endl;
-    }
+    void descompunere();
 
 };
 
