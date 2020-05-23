@@ -29,6 +29,20 @@ NrMare::~NrMare()
     delete []v;
 }
 
+void NrMare::read()
+    {
+        char s[MAX];
+        int i;
+
+        std::cin>>s;
+        this->n=strlen(s);
+        this->v=new int[this->n];
+
+        for(i=0;i<this->n;i++)
+            this->v[i]=(s[i]-'0');
+
+    }
+
 void Swap(NrMare &ob1, NrMare &ob2)
     {
         std::swap(ob1.n,ob2.n);
