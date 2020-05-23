@@ -11,7 +11,7 @@ public:
 
     Fibonacci();
 
-    virtual void descompunere();
+    void descompunere();
     
 };
 
