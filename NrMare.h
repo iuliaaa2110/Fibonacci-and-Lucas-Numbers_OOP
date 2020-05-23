@@ -25,19 +25,7 @@ public:
         return *this;
     }
 
-    virtual void read()
-    {
-        char s[MAX];
-        int i;
-
-        std::cin>>s;
-        this->n=strlen(s);
-        this->v=new int[this->n];
-
-        for(i=0;i<this->n;i++)
-            this->v[i]=(s[i]-'0');
-
-    }
+    virtual void read();
 
     friend std::ostream& operator <<(std::ostream &out, NrMare &ob1);
     friend NrMare &operator +(NrMare &ob1,NrMare &ob2);
