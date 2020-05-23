@@ -13,3 +13,10 @@ Fibonacci::Fibonacci(){
     }
     
 }
+
+void Fibonacci:: descompunere()
+    {
+        std::cout<<"Descompunerea numarului "<<*this<<" in suma de numere Fibonacci este:"<<std::endl;
+        BazaLucas::descompunere(vF);    //pe zero il mosteneste din BazaLucas
+        std::cout<<std::endl;
+    }
